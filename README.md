@@ -15,5 +15,5 @@ HTML files, one with the default IPython template, and one that hides the code.
 Sending to S3
 -------------
 
-We're using (s3_website)[https://github.com/laurilehmijoki/s3_website] to push the 
+We're using [s3_website](https://github.com/laurilehmijoki/s3_website) to push the 
 notebooks to the web. 
