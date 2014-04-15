@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+# 
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P )"
+DIR=$(dirname $(dirname $DIR))
+
+IFS=$'\n'
+notebooks=$(find $DIR/notebooks -name '*.ipynb' -exec echo "{}" \; )
+
+out_files=$($DIR/_ipython/convert.py $notebooks)
+
+for out_file in $out_files; do
+    git add $out_file
+    #echo converted: $out_file
+
+done
